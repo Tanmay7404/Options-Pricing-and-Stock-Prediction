@@ -58,29 +58,20 @@ This section applies machine learning and deep learning models to forecast time 
 
 This suite of notebooks covers the valuation of various exotic and standard options using numerical methods.
 
-#### 1. `LookbackOptionPricing.ipynb`
-
-This notebook contrasts standard option pricing with the valuation of a highly path-dependent **Lookback option**.
-
--   **Part 1**: Prices European options using two variations of the binomial model and performs a full sensitivity analysis.
--   **Part 2**: Focuses on pricing a Lookback option, whose payoff depends on the *maximum* asset price achieved. It demonstrates:
-    -   **Brute-Force Method**: A naive O(2^M) algorithm that is computationally infeasible for a moderate number of steps.
-    -   **Dynamic Programming**: An efficient O(M⁴) algorithm that uses memoization to make the problem solvable.
-
-#### 2. `EuropeanOptions.ipynb`
+#### 1. `01_EuropeanOptions.ipynb`
 
 A clear and focused implementation of the Binomial Model for pricing standard **European call and put options**.
 
 -   **Focus**: Demonstrates the convergence of the binomial model toward the theoretical Black-Scholes price as the number of time steps (`M`) increases.
 
-#### 3. `AmericanOptions.ipynb`
+#### 2. `02_AmericanOptions.ipynb`
 
 This notebook extends the binomial model to price **American options**, which have the key feature of early exercise.
 
 -   **Key Feature**: Implements the logic to check for optimal early exercise at each node of the binomial tree.
 -   **Analysis**: Includes a full sensitivity analysis and visualization of the price lattice to determine the optimal exercise strategy.
 
-#### 4. `AsianOptions.ipynb`
+#### 3. `03_AsianOptions.ipynb`
 
 This notebook prices **Asian options**, where the payoff is determined by the average price of the underlying asset.
 
@@ -89,11 +80,21 @@ This notebook prices **Asian options**, where the payoff is determined by the av
 
 ---
 
+#### 4. `04_LookbackOptionPricing.ipynb`
+
+This notebook contrasts standard option pricing with the valuation of a highly path-dependent **Lookback option**.
+
+-   **Part 1**: Prices European options using two variations of the binomial model and performs a full sensitivity analysis.
+-   **Part 2**: Focuses on pricing a Lookback option, whose payoff depends on the *maximum* asset price achieved. It demonstrates:
+    -   **Brute-Force Method**: A naive O(2^M) algorithm that is computationally infeasible for a moderate number of steps.
+    -   **Dynamic Programming**: An efficient O(M⁴) algorithm that uses memoization to make the problem solvable.
+      
+
 ### Stock Price Prediction
 
 This notebook focuses on forecasting future stock prices using both a simple baseline and advanced deep learning models.
 
-#### 5. `stock_prediction_notebook_explained.ipynb`
+#### 5. `05_StockPrediction.ipynb`
 
 This notebook uses historical data for Google (`GOOG`) to predict its future stock price. It builds and evaluates several models of increasing complexity.
 
